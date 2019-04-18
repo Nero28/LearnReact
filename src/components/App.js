@@ -4,10 +4,10 @@ import ArticleList from './ArticleList'
 import 'bootstrap/dist/css/bootstrap.css'
 
 
-class App extends Component(){
-   // state={
+class App extends Component{
+   state={
         //reverted:false
-   // }
+   }
     render(){
         return (
           <div className="container">
