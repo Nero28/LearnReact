@@ -9,11 +9,13 @@ constructor(props){
        isOpen:props.defaultOpen
     }
 }
+shouldComponentUpdate(nextProps,nextState){
+    return this.state.isOpen!==nextState.isOpen
+}
     componentWillMount(){
         console.log('---','mounting')
     }
     componentWillReceiveProps(nextProps){
-        console.log('---','will receive props')
         if (nextProps.defaultOpen!==this.props.defaultOpen)this.setState({
             isOpen:nextProps.defaultOpen
 
@@ -50,7 +52,6 @@ componentWillUpdate() {
         }
     
     handleClick = () => {
-        console.log('---','clicked')
         this.setState({
             isOpen:!this.state.isOpen
         })
